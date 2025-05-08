@@ -129,9 +129,14 @@ void Gamemanager::Gamemode()
 
 void Gamemanager::Findpath()
 {
+    // Sleep(500);
+    // system("cls");
+    // PrintMaze();
+
     if (cpu.Getrow() == Endposition_row && cpu.Getcol() == Endposition_col)
     {
         cpu.Setshortest();
+        cout << "Finished";
         return;
     }
 
@@ -287,6 +292,7 @@ void Gamemanager::GetInputKey()
                 }
                 system("cls");
                 PrintMaze();
+                cout << "Press WASD to move, Press 0 to exit\n";
             }
             if (ch == 'A') 
             {
@@ -311,6 +317,7 @@ void Gamemanager::GetInputKey()
                 }
                 system("cls");
                 PrintMaze();
+                cout << "Press WASD to move, Press 0 to exit\n";
             }
             if (ch == 'S') 
             {
@@ -335,6 +342,7 @@ void Gamemanager::GetInputKey()
                 }
                 system("cls");
                 PrintMaze();
+                cout << "Press WASD to move, Press 0 to exit\n";
             }
             if (ch == 'D') 
             {
@@ -359,10 +367,13 @@ void Gamemanager::GetInputKey()
                 }            
                 system("cls");
                 PrintMaze();
-
+                cout << "Press WASD to move, Press 0 to exit\n";
             }
-        }
-        
+            if (ch == '0')
+            {
+                break;
+            }
+        }   
     }
 }
 

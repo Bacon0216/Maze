@@ -3,6 +3,7 @@
 #include <Windows.h>
 
 #include "cpu.h"
+#include <cctype>
 #include <conio.h>
 #include <fstream>
 #include <sstream>
